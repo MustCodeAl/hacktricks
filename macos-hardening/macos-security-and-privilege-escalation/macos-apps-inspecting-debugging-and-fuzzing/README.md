@@ -350,6 +350,12 @@ You need to monitor your mac with a command like **`sudo eslogger fork exec rena
 
 ![](<../../../.gitbook/assets/image (1135).png>)
 
+
+### Hackintool
+[**Hackintool**](https://github.com/benbaker76/Hackintool) The Swiss army knife of vanilla Hackintoshing - used to Display and edit Memory Info such as Stolen, Framebuffer, VRAM, Cursor etc,
+
+
+
 ### fs\_usage
 
 Allows to follow actions performed by processes:
