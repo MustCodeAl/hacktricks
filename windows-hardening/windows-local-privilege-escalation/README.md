@@ -78,7 +78,7 @@ This [site](https://msrc.microsoft.com/update-guide/vulnerability) is handy for 
 * [_watson_](https://github.com/rasta-mouse/Watson)
 * [_winpeas_](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) _(Winpeas has watson embedded)_
 
-**Locally with system infromation**
+**Locally with system information**
 
 * [https://github.com/AonCyberLabs/Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 * [https://github.com/bitsadmin/wesng](https://github.com/bitsadmin/wesng)
@@ -96,7 +96,7 @@ Any credential/Juicy info saved in the env variables?
 ```bash
 set
 dir env:
-Get-ChildItem Env: | ft Key,Value
+Get-ChildItem Env: | ft Key,Value -AutoSize
 ```
 
 ### PowerShell History
@@ -1357,7 +1357,7 @@ COM classes and interfaces are defined in the registry under **HKEY\_**_**CLASSE
 
 Inside the CLSIDs of this registry you can find the child registry **InProcServer32** which contains a **default value** pointing to a **DLL** and a value called **ThreadingModel** that can be **Apartment** (Single-Threaded), **Free** (Multi-Threaded), **Both** (Single or Multi) or **Neutral** (Thread Neutral).
 
-![](<../../.gitbook/assets/image (726).png>)
+![](<../../.gitbook/assets/image (729).png>)
 
 Basically, if you can **overwrite any of the DLLs** that are going to be executed, you could **escalate privileges** if that DLL is going to be executed by a different user.
 

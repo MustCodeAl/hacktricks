@@ -14,6 +14,20 @@ Other ways to support HackTricks:
 
 </details>
 
+### [WhiteIntel](https://whiteintel.io)
+
+<figure><img src="../../.gitbook/assets/image (1227).png" alt=""><figcaption></figcaption></figure>
+
+[**WhiteIntel**](https://whiteintel.io) is a **dark-web** fueled search engine that offers **free** functionalities to check if a company or its customers have been **compromised** by **stealer malwares**.
+
+Their primary goal of WhiteIntel is to combat account takeovers and ransomware attacks resulting from information-stealing malware.
+
+You can check their website and try their engine for **free** at:
+
+{% embed url="https://whiteintel.io" %}
+
+***
+
 ## Integrity Levels
 
 In Windows Vista and later versions, all protected items come with an **integrity level** tag. This setup mostly assigns a "medium" integrity level to files and registry keys, except for certain folders and files that Internet Explorer 7 can write to at a low integrity level. The default behavior is for processes initiated by standard users to have a medium integrity level, whereas services typically operate at a system integrity level. A high-integrity label safeguards the root directory.
@@ -29,11 +43,11 @@ A key rule is that objects can't be modified by processes with a lower integrity
 
 You can get the integrity level of a process using **Process Explorer** from **Sysinternals**, accessing the **properties** of the process and viewing the "**Security**" tab:
 
-![](<../../.gitbook/assets/image (821).png>)
+![](<../../.gitbook/assets/image (824).png>)
 
 You can also get your **current integrity level** using `whoami /groups`
 
-![](<../../.gitbook/assets/image (322).png>)
+![](<../../.gitbook/assets/image (325).png>)
 
 ### Integrity Levels in File-system
 
@@ -99,7 +113,7 @@ C:\Windows\System32\cmd-low.exe NT AUTHORITY\SYSTEM:(I)(F)
 
 Now, when I run `cmd-low.exe` it will **run under a low-integrity level** instead of a medium one:
 
-![](<../../.gitbook/assets/image (310).png>)
+![](<../../.gitbook/assets/image (313).png>)
 
 For curious people, if you assign high integrity level to a binary (`icacls C:\Windows\System32\cmd-high.exe /setintegritylevel high`) it won't run with high integrity level automatically (if you invoke it from a medium integrity level --by default-- it will run under a medium integrity level).
 
@@ -108,6 +122,18 @@ For curious people, if you assign high integrity level to a binary (`icacls C:\W
 Not all files and folders have a minimum integrity level, **but all processes are running under an integrity level**. And similar to what happened with the file-system, **if a process wants to write inside another process it must have at least the same integrity level**. This means that a process with low integrity level can’t open a handle with full access to a process with medium integrity level.
 
 Due to the restrictions commented in this and the previous section, from a security point of view, it's always **recommended to run a process in the lower level of integrity possible**.
+
+### [WhiteIntel](https://whiteintel.io)
+
+<figure><img src="../../.gitbook/assets/image (1227).png" alt=""><figcaption></figcaption></figure>
+
+[**WhiteIntel**](https://whiteintel.io) is a **dark-web** fueled search engine that offers **free** functionalities to check if a company or its customers have been **compromised** by **stealer malwares**.
+
+Their primary goal of WhiteIntel is to combat account takeovers and ransomware attacks resulting from information-stealing malware.
+
+You can check their website and try their engine for **free** at:
+
+{% embed url="https://whiteintel.io" %}
 
 <details>
 
