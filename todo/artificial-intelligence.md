@@ -133,7 +133,7 @@ https://github.com/OpenDevin/OpenDevin
 https://github.com/iperov/DeepFaceLive
 https://github.com/divamgupta/diffusionbee-stable-diffusion-ui
 https://docs.github.com/en/copilot/github-copilot-in-the-cli/installing-github-copilot-in-the-cli
-
+https://github.com/kohkimakimoto/chatgpt-prompt-snippets-chrome-extension
 
 
 ### references 
